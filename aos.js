@@ -1,4 +1,5 @@
 const els = document.querySelectorAll("[data-aos]");
+console.log(els);
 const options = {
   rootMargin: "-15%"
 };
