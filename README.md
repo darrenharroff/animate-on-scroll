@@ -1,8 +1,8 @@
 -- INSTRUCTIONS --
 
-- link to stylesheet at "https://github.com/darrenharroff/animate-on-scroll.git/aos.css"
+- link to stylesheet at "https://darrenharroff.github.io/animate-on-scroll/aos.css"
 
-- link to js at "https://github.com/darrenharroff/animate-on-scroll.git/aos.js"
+- link to js at "https://darrenharroff.github.io/animate-on-scroll/aos.js"
 
 - add interaction by adding a "data-aos" custom attribute to html elements. Set this property to one of the available settings for different animations:
 
