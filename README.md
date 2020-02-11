@@ -1,6 +1,6 @@
 -- INSTRUCTIONS --
 
-- link to stylesheet at "https://darrenharroff.github.io/animate-on-scroll/aos.css"
+- link to stylesheet at "https://darrenharroff.github.io/animate-on-scroll/css/aos.css"
 
 - link to js at "https://darrenharroff.github.io/animate-on-scroll/aos.js"
 
