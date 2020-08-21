@@ -3,11 +3,11 @@ console.log(els);
 
 els.forEach((el) => {
   if (el.getAttribute("data-entrypoint")) {
-    let options = {
+    var options = {
       rootMargin: `${el.getAttribute("data-entrypoint")}`,
     };
   } else {
-    let options = {
+    var options = {
       rootMargin: "-15%",
     };
   }
