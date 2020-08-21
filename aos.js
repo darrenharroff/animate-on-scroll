@@ -18,8 +18,8 @@ els.forEach((el) => {
   const aosObs = new IntersectionObserver((entries, aosObs) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        if (el.getAttribute("data-reanimate") == true) {
-          console.log(`${el.className} reanimates`);
+        if (el.getAttribute("data-reanimate")) {
+          // console.log(`${el.className} reanimates`);
           el.classList.toggle("anim");
         } else {
           el.classList.add("anim");
