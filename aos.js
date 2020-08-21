@@ -19,16 +19,9 @@ els.forEach((el) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         el.classList.add("anim");
-        if (!el.getAttribute("data-reanimate")) {
-          aosObs.disconnect;
-          console.log(`${el} unobserved`);
-        }
+        aosObs.unobserve;
       } else {
-        // if (el.getAttribute("data-reanimate")) {
-        //   console.log(`${el} reanimated`);
-
-        el.classList.remove("anim");
-        // }
+        console.log(`${el.className} is out of range`);
       }
     });
   }, options);
