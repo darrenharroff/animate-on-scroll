@@ -19,6 +19,7 @@ els.forEach((el) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         if (el.getAttribute("data-reanimate")) {
+          console.log(`${el.className} reanimates`);
           el.classList.toggle("anim");
         } else {
           el.classList.add("anim");
