@@ -1,5 +1,5 @@
 const els = document.querySelectorAll("[data-aos]");
-console.log(els);
+// console.log(els);
 
 els.forEach((el) => {
   if (el.getAttribute("data-entrypoint")) {
@@ -20,15 +20,15 @@ els.forEach((el) => {
       if (entry.isIntersecting) {
         el.classList.add("anim");
         if (!el.getAttribute("data-reanimate")) {
-          aosObs.unobserve;
+          aosObs.disconnect;
           console.log(`${el} unobserved`);
         }
       } else {
-        if (el.getAttribute("data-reanimate")) {
-          console.log(`${el} reanimated`);
+        // if (el.getAttribute("data-reanimate")) {
+        //   console.log(`${el} reanimated`);
 
-          el.classList.remove("anim");
-        }
+        el.classList.remove("anim");
+        // }
       }
     });
   }, options);
