@@ -12,12 +12,6 @@ els.forEach((el) => {
     };
   }
 
-  if (el.getAttribute("data-reanimate")) {
-    var reanimate = true;
-  } else {
-    var reanimate = false;
-  }
-
   if (el.getAttribute("data-delay")) {
     el.style.animationDelay = el.getAttribute("data-delay") + "ms";
   }
@@ -25,13 +19,14 @@ els.forEach((el) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         el.classList.add("anim");
-        if (reanimate == false) {
+        if (!el.getAttribute("data-reanimate")) {
+          console.log(`${el.className} does not reanimate!`);
           aosObs.unobserve;
         }
+        console.log(`${el.className} DOES reanimate!`);
       } else {
-        if (reanimate) {
-          el.classList.remove("anim");
-        }
+        console.log(`${el.className} left the range!`);
+        el.classList.remove("anim");
       }
     });
   }, options);
