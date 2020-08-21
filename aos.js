@@ -22,8 +22,9 @@ els.forEach((el) => {
         if (!el.getAttribute("data-reanimate")) {
           console.log(`${el.className} does not reanimate!`);
           aosObs.unobserve;
+        } else {
+          console.log(`${el.className} DOES reanimate!`);
         }
-        console.log(`${el.className} DOES reanimate!`);
       } else {
         console.log(`${el.className} left the range!`);
         el.classList.remove("anim");
