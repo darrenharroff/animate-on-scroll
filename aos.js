@@ -1,14 +1,15 @@
 const els = document.querySelectorAll("[data-aos]");
 console.log(els);
-const options = {
-  rootMargin: "-15%"
-};
-els.forEach(el => {
+
+els.forEach((el) => {
+  let options = {
+    rootMargin: `${el.getAttribute("data-entrypoint")}`,
+  };
   if (el.getAttribute("data-delay")) {
     el.style.animationDelay = el.getAttribute("data-delay") + "ms";
   }
   const aosObs = new IntersectionObserver((entries, aosObs) => {
-    entries.forEach(entry => {
+    entries.forEach((entry) => {
       if (entry.isIntersecting) {
         el.classList.add("anim");
         aosObs.unobserve;
@@ -20,11 +21,11 @@ els.forEach(el => {
 
 const images = document.querySelectorAll(".lazy");
 const lazyOptions = {
-  rootMargin: "40% 0%"
+  rootMargin: "40% 0%",
 };
-images.forEach(image => {
+images.forEach((image) => {
   const imageObs = new IntersectionObserver((entries, imageObs) => {
-    entries.forEach(entry => {
+    entries.forEach((entry) => {
       if (entry.isIntersecting) {
         image.src = image.getAttribute("data-src");
         image.classList.add("lazy-in");
