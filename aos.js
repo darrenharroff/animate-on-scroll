@@ -12,6 +12,12 @@ els.forEach((el) => {
     };
   }
 
+  if (el.getAttribute("data-reanimate")) {
+    var reanimate = true;
+  } else {
+    var reanimate = false;
+  }
+
   if (el.getAttribute("data-delay")) {
     el.style.animationDelay = el.getAttribute("data-delay") + "ms";
   }
@@ -19,7 +25,9 @@ els.forEach((el) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         el.classList.add("anim");
-        aosObs.unobserve;
+        if (reanimate == false) {
+          aosObs.unobserve;
+        }
       }
     });
   }, options);
