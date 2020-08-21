@@ -19,9 +19,14 @@ els.forEach((el) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         el.classList.add("anim");
-        aosObs.unobserve;
+        if (!el.getAttribute("data-reanimate")) {
+          aosObs.unobserve;
+          console.log(`${el} unobserved`);
+        }
       } else {
         if (el.getAttribute("data-reanimate")) {
+          console.log(`${el} reanimated`);
+
           el.classList.remove("anim");
         }
       }
