@@ -18,15 +18,12 @@ els.forEach((el) => {
   const aosObs = new IntersectionObserver((entries, aosObs) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        el.classList.toggle("anim");
-        console.log(`${el.className} fired`);
-        aosObs.unobserve;
-      } else {
-        console.log(`${el.className} is out of range`);
         if (el.getAttribute("data-reanimate")) {
-          console.log(`${el.className} reanimate fired`);
-          el.classList.remove("anim");
+          el.classList.toggle("anim");
+        } else {
+          el.classList.add("anim");
         }
+        aosObs.unobserve;
       }
     });
   }, options);
