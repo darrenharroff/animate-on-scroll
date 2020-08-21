@@ -2,9 +2,16 @@ const els = document.querySelectorAll("[data-aos]");
 console.log(els);
 
 els.forEach((el) => {
-  let options = {
-    rootMargin: `${el.getAttribute("data-entrypoint")}`,
-  };
+  if (el.getAttribute("data-entrypoint")) {
+    let options = {
+      rootMargin: `${el.getAttribute("data-entrypoint")}`,
+    };
+  } else {
+    let options = {
+      rootMargin: "-15%",
+    };
+  }
+
   if (el.getAttribute("data-delay")) {
     el.style.animationDelay = el.getAttribute("data-delay") + "ms";
   }
