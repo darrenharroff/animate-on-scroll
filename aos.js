@@ -1,5 +1,5 @@
 const els = document.querySelectorAll("[data-aos]");
-console.log(els);
+// console.log(els);
 
 els.forEach((el) => {
   if (el.getAttribute("data-entrypoint")) {
@@ -27,6 +27,10 @@ els.forEach((el) => {
         el.classList.add("anim");
         if (reanimate == false) {
           aosObs.unobserve;
+        }
+      } else {
+        if (reanimate) {
+          el.classList.remove("anim");
         }
       }
     });
