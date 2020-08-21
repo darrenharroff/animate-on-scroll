@@ -22,6 +22,9 @@ els.forEach((el) => {
         aosObs.unobserve;
       } else {
         console.log(`${el.className} is out of range`);
+        if (el.getAttribute("data-reanimate")) {
+          el.classList.remove("anim");
+        }
       }
     });
   }, options);
